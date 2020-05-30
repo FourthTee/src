@@ -176,7 +176,7 @@ def postprocess_boxes(pred_bbox, org_img_shape, input_size, score_threshold):
 
 if __name__ == '__main__':
    
-    image_path = './images/ayush.jpg'
+    image_path = './images/road.jpeg'
     num_classes = 80
     input_size = 416
 
@@ -196,6 +196,7 @@ if __name__ == '__main__':
     json_response = requests.post('http://localhost:8501/v1/models/test_model:predict', data=json.dumps(data), headers=headers)
     
     #Receive Prediction and convert back to array format
+    
     predictions = json.loads(json_response.text)['outputs']
     pred_sbbox = predictions['sbbox']
     pred_mbbox = predictions['mbbox']
