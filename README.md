@@ -1,6 +1,6 @@
 These are the instructions to deploy the tensor-serving using docker
 
-1. Direct to the directory containing the files
+1. Move to the directory containing the files for this assignment
 
 2. Clone this repo using the command 
 
